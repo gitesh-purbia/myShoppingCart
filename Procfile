@@ -1,2 +1,1 @@
-worker: npm run prod
-heroku scale web=0 worker=1
+web: npm run prod
