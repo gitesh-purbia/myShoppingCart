@@ -15,7 +15,7 @@
 
       <div ngbDropdown placement="bottom-right" autoClose="false">
         <button style="margin-top: 10px;" class="btn btn-outline-primary pull-right" id="dropdownConfig" ngbDropdownToggle>
-          Toggle
+          Total Item: {{myCartProducts.length}} <span class="caret"></span>
         </button>
         <div ngbDropdownMenu aria-labelledby="dropdownConfig">
           <ul style="width: 300px; padding: 10px; max-height: 100vh; overflow-y: auto">
@@ -50,9 +50,9 @@
               </li>
             </ng-container>
             <li class="divider"></li>
-            <li>
+            <!-- <li>
               <a class="text-center" href="">View Cart</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
