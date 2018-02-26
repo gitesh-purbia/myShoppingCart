@@ -20,13 +20,12 @@ export class ProductsComponent implements OnInit {
   };
   isLoading = false;
   constructor(private productService: ProductService, private renderer: Renderer2, private el: ElementRef) {
-    // this.renderer.listen('window', 'scroll',  (event) => {
-    //   console.log(event);
-    //   if (!this.isLoading && this.products.length < this.productsLazyLoad.totalCount &&
-    //     event.path[1].scrollY + event.path[1].innerHeight === event.path[0].height()) {
-    //     this.loadMoreProducts();
-    //   }
-    // });
+    this.renderer.listen('window', 'scroll',  (event) => {
+      if (!this.isLoading && this.products.length < this.productsLazyLoad.totalCount &&
+        event.path[1].scrollY + event.path[1].innerHeight === event.path[0].documentElement.offsetHeight) {
+        this.loadMoreProducts();
+      }
+    });
   }
 
   ngOnInit() {
