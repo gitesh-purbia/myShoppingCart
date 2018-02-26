@@ -5,10 +5,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "preprod": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prod": "node server.js"
   },
   "private": true,
   "dependencies": {
@@ -25,7 +26,8 @@
     "core-js": "^2.4.1",
     "lodash": "^4.17.5",
     "rxjs": "^5.5.6",
-    "zone.js": "^0.8.19"
+    "zone.js": "^0.8.19",
+    "spa-server": "^1.0.0"
   },
   "devDependencies": {
     "@angular/cli": "~1.7.0",
