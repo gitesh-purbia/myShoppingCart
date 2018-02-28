@@ -60,7 +60,6 @@ export class ProductsComponent implements OnInit {
   }
 
   addToCart(p) {
-    console.log('calling');
     this.myCartProducts.push(p);
     // alertify.log('Item Added to cart');
   }

@@ -25,9 +25,9 @@
             <li class="divider"></li>
             <li style="background: #eee; padding: 5px;"
               *ngIf="myCartProducts.length === 0">No Item in cart..</li>
-            <ng-container *ngIf="myCartProducts.length > 0">
+            <ng-container *ngIf="myCartProducts.length > 0;">
               <li style="background: #eee; margin-bottom: 5px; padding: 10px;"
-                *ngFor="let cart of myCartProducts">
+                *ngFor="let cart of myCartProducts; let i = index">
                 <div class="item">
                   <div class="item-left">
                     <div class="row">
@@ -37,7 +37,7 @@
                       <div class="col-md-8 item-info">
                         <span class="pull-right">
                           <button
-                            (click)="remoteCartProduct($index)"
+                            (click)="remoteCartProduct(i)"
                             class="btn btn-xs btn-danger pull-right">x
                           </button>
                         </span>
